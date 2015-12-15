@@ -1,4 +1,4 @@
-package 'apache2'
+package 'apache'
 
 package 'mysql' do
   version '5.6.17'
