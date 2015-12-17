@@ -1,3 +1,5 @@
+package 'httpd'
+
 service 'default' do
   supports :status => true
   action [:enable, :start]
