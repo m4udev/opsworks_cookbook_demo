@@ -1,14 +1,25 @@
-package 'httpd'
-
-service 'default' do
-  supports :status => true
-  action [:enable, :start]
+# Install apache and start the service
+httpd_service 'site' do 
+  mpm 'prefork'
+  action [:create, :start]
 end
 
-file '/var/www/html/index.html' do
-  content '<html>
-    <body>
-      <h1>Hello Cookbook </h1>
-    </body>
-  </html>'
+# Add the site configuration
+httpd_config 'site' do
+  instance 'site'
+  source 'site.conf.erb'
+  notifies :restart, 'httpd_service[site]'
+end
+
+#create the document root directory
+directory '/var/www/public_html' do
+  recursive true
+end
+
+#write the homepage
+file '/var/www/public_html/index.php' do 
+  content '<html>This is a web</html>'
+  mode '0644'
+  owner 'web_admin'
+  group 'web_admin'
 end
