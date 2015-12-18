@@ -1,4 +1,4 @@
 include_recipe 'selinux::permissive'
-include_recipe 'awesome_customers::user'
-include_recipe 'awesome_customers::webserver'
-include_recipe 'awesome_customers::firewall'
+include_recipe 'opsworks_cookbook_demo::user'
+include_recipe 'opsworks_cookbook_demo::webserver'
+include_recipe 'opsworks_cookbook_demo::firewall'
