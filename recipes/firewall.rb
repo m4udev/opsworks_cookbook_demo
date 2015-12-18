@@ -5,3 +5,12 @@ node['site']['enabled_firewall_rules'].each do |rule|
     action :enable
   end
 end
+
+
+iptables_rule 'firewall_http' do
+  action :enable
+end
+
+iptables_rule 'firewall_sshd' do
+  action :enable
+end
