@@ -1,4 +1,6 @@
 # Install apache and start the service
+package 'httpd'
+
 httpd_service 'site' do 
   mpm 'prefork'
   action [:create, :start]
