@@ -6,6 +6,6 @@ name "opsworks_cookbook_demo"
 #depends 'selinux', '~> 0.9.0'
 #depends 'iptables', '~> 1.0.0'
 
-depends 'httpd', '~> 0.2.18'
+depends 'httpd'
 depends 'selinux'
 depends 'iptables'
