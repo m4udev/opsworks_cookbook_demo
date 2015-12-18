@@ -1,3 +1,6 @@
+#A template is much like a PHP app template with variable replacements, 
+#loops etc, but for system config files. Think v-hosts, httpd.conf, php.ini etc.
+
 <VirtualHost *:80>
   ServerName <%= node['hostname'] %>
   ServerAdmin 'ops@example.com'
