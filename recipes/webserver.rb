@@ -2,8 +2,7 @@
 package 'httpd'
 
 httpd_service 'site' do 
-  mpm 'prefork'
-  action [:create, :start]
+  action [:enable, :start]
 end
 
 # Add the site configuration
