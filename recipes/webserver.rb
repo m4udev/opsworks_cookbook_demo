@@ -12,12 +12,12 @@ httpd_config 'site' do
 end
 
 #create the document root directory
-directory '/var/www/public_html' do
-  recursive true
-end
+#directory '/var/www/public_html' do
+#  recursive true
+#end
 
 #write the homepage
-file '/var/www/public_html/index.php' do 
+file '/var/www/index.php' do 
   content '<html>This is a web</html>'
   mode '0644'
   owner 'web_admin'
