@@ -1,7 +1,6 @@
 package 'httpd'
 
 service 'site' do 
-  mpm 'prefork'
   action [:create, :start]
 end
 
