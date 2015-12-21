@@ -1,6 +1,7 @@
 #https://learn.chef.io/manage-a-web-app/rhel/configure-apache/
 
 name "opsworks_cookbook_demo"
+version "0.1.0"
 
 #depends 'httpd', '~> 0.2.18'
 #depends 'selinux', '~> 0.9.0'
