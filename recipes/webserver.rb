@@ -1,28 +1,21 @@
-# Install apache and start the service
-package 'httpd'
+# Install apache a
+package 'apache2'
 
-httpd_service 'site' do 
-  action [:enable, :start]
+service 'apache' do
+  action :start
 end
 
-# Add the site configuration
-#httpd_config 'site' do
-#  instance 'site'
-#  source 'site.conf.erb'
-#  notifies :restart, 'httpd_service[site]'
-#end
-
 #create the document root directory
-#directory '/var/www/public_html' do
-#  recursive true
-#end
+directory '/var/www/public_html' do
+  recursive true
+end
 
 #write the homepage
 file '/var/www/public_html/index.html' do 
   content '<html>This is a web</html>'
-  mode '0644'
-  owner 'web_admin'
-  group 'web_admin'
+  mode '0755'
+  owner 'apache'
+  group 'apache'
 end
 
 # Install apache , config and etc END
