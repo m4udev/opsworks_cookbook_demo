@@ -1,7 +1,7 @@
-# Install apache a
-package 'apache2'
+# Install httpd
+package 'httpd'
 
-service 'apache' do
+service 'httpd' do
   action :start
 end
 
