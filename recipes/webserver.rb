@@ -7,14 +7,6 @@ service 'httpd' do
   action :start
 end
 
-#group 'www' do 
-#  append true
-#  action :modify
-#end
-
-#user 'www' do
-#end
-
 #write the homepage
 file '/var/www/html/index.html' do 
   content '<html>This is a web</html>'
@@ -24,6 +16,22 @@ file '/var/www/html/index.html' do
 end
 
 # Install apache , config and etc END
+yum_package 'php'
+  action :install
+end
+
+yum_package 'php-pdo'
+  action :install
+end
+
+yum_package 'php-pear'
+  action :install
+end
+
+yum_package 'php-mbstring'
+  action :install
+end
+
 
 # Install the mod_php5 apache module
 #httpd_module 'php' do 
