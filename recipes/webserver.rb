@@ -16,7 +16,7 @@ end
 #end
 
 #write the homepage
-file '/var/www/index.html' do 
+file '/var/www/html/index.html' do 
   content '<html>This is a web</html>'
   mode '0755'
   #owner 'www'
