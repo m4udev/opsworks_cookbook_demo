@@ -12,17 +12,15 @@ end
 #  action :modify
 #end
 
-user 'www' do
-  uid '100'
-  gid '100'
-end
+#user 'www' do
+#end
 
 #write the homepage
 file '/var/www/public_html/index.html' do 
   content '<html>This is a web</html>'
   mode '0755'
   #owner 'www'
-  group 'www'
+  #group 'www'
 end
 
 # Install apache , config and etc END
