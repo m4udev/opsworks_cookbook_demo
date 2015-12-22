@@ -7,9 +7,14 @@ service 'httpd' do
   action :start
 end
 
-group 'www' do 
-  append true
-  action :modify
+#group 'www' do 
+#  append true
+#  action :modify
+#end
+
+user 'www' do
+  uid '100'
+  gid '100'
 end
 
 #write the homepage
