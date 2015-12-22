@@ -1,16 +1,22 @@
 # Install httpd
-package 'httpd'
+yum_package 'http24' do 
+  action :install
+end
 
 service 'httpd' do
   action :start
 end
 
+group 'www' do 
+  append true
+  action :modify
+end
 
 #write the homepage
 file '/var/www/public_html/index.html' do 
   content '<html>This is a web</html>'
   mode '0755'
-  owner 'www'
+  #owner 'www'
   group 'www'
 end
 
