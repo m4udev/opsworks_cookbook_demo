@@ -1,5 +1,5 @@
 # Install httpd
-yum_package 'httpd24' do 
+yum_package 'httpd' do 
   action :install
 end
 
