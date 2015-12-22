@@ -16,19 +16,19 @@ file '/var/www/html/index.html' do
 end
 
 # Install apache , config and etc END
-yum_package 'php'
+yum_package 'php' do
   action :install
 end
 
-yum_package 'php-pdo'
+yum_package 'php-pdo' do
   action :install
 end
 
-yum_package 'php-pear'
+yum_package 'php-pear' do
   action :install
 end
 
-yum_package 'php-mbstring'
+yum_package 'php-mbstring' do
   action :install
 end
 
