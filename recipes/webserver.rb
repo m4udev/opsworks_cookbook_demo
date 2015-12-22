@@ -5,17 +5,13 @@ service 'httpd' do
   action :start
 end
 
-#create the document root directory
-directory '/var/www/public_html' do
-  recursive true
-end
 
 #write the homepage
 file '/var/www/public_html/index.html' do 
   content '<html>This is a web</html>'
   mode '0755'
-  owner 'apache'
-  group 'apache'
+  owner 'www'
+  group 'www'
 end
 
 # Install apache , config and etc END
