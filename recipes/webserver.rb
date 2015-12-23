@@ -1,7 +1,6 @@
 # Install httpd
-yum_package 'httpd' do 
+yum_package 'httpd 5.5' do 
   action :install
-  version '2.4.9'
 end
 
 service 'httpd' do
@@ -9,9 +8,8 @@ service 'httpd' do
 end
 
 # Install apache , config and etc END
-yum_package 'php' do
+yum_package 'php >= 5.5' do
   action :install
-  version '5.5.12'
 end
 
 yum_package 'php-pdo' do
