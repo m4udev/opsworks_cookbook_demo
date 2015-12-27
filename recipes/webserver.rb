@@ -1,6 +1,7 @@
 # Install httpd
-yum_package 'httpd 5.5' do 
-  action :install
+yum_package 'httpd' do 
+  action :upgrade
+  version '2.4.9'
 end
 
 service 'httpd' do
