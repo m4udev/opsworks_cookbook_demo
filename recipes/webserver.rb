@@ -1,7 +1,11 @@
+yum_package 'httpd-tools' do 
+  action :remove
+end
+
 # Install httpd
 yum_package 'httpd' do 
   action :upgrade
-  version '2.4.9'
+  version '2.4'
 end
 
 service 'httpd' do
