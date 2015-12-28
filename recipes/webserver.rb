@@ -62,8 +62,3 @@ yum_package 'php-mysqli' do
   action :install
 end
 ## Install ends
-
-
-service 'httpd' do
-  action :restart
-end
