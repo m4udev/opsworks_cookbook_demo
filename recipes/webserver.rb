@@ -42,13 +42,17 @@ yum_package 'php55' do
   action :install
 end
 
-yum_package 'php-mysqli' do
+#yum_package 'php-mysqli' do
+#  action :install
+#end
+
+yum_package 'php55-mysqlnd' do
   action :install
 end
 
-#yum_package 'php55-pdo' do
-#  action :install
-#end
+yum_package 'php55-pdo' do
+  action :install
+end
 
 #yum_package 'php-pear' do
 #  action :install
