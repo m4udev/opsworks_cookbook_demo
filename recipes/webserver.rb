@@ -13,8 +13,7 @@ end
 
 yum_package 'php-cli' do
   action :remove
-endn
-
+end
 
 yum_package 'php-xml' do 
   action :remove
