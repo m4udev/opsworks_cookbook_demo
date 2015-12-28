@@ -11,15 +11,27 @@ yum_package 'httpd24' do
   action :install
 end
 
-##service 'httpd' do
-#  action :start
-#end
+service 'httpd' do
+  action :start
+end
 
 # Install apache , config and etc END
-#yum_package 'php' do
-#  action :upgrade
-#  version '5.5.12'
-#end
+yum_package 'php' do
+  action :upgrade
+  version '5.5.12'
+end
+
+yum_package 'php' do 
+  action :remove
+end
+
+yum_package 'php-common' do 
+  action :remove
+end
+
+yum_package 'php55' do 
+  action :install
+end
 
 #yum_package 'php-pdo' do
 #  action :install
@@ -42,6 +54,6 @@ end
 #end
 
 
-#service 'httpd' do
-#  action :restart
-#end
+service 'httpd' do
+  action :restart
+end
