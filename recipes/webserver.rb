@@ -44,6 +44,10 @@ yum_package 'php-pear' do
 end
 
 yum_package 'php-mbstring' do
+  action :remove
+end
+
+yum_package 'php55-mbstring' do
   action :install
 end
 
