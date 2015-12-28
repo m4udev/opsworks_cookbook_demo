@@ -3,10 +3,6 @@ yum_package 'httpd' do
   action :remove
 end
 
-yum_package 'php-mysql' do 
-  action :remove
-end
-
 yum_package 'php' do 
   action :remove
 end
@@ -17,7 +13,8 @@ end
 
 yum_package 'php-cli' do
   action :remove
-end
+endn
+
 
 yum_package 'php-xml' do 
   action :remove
@@ -46,7 +43,7 @@ yum_package 'php55' do
   action :install
 end
 
-yum_package 'php-mysql' do
+yum_package 'php55-mysqlnd' do
   action :install
 end
 
@@ -54,7 +51,7 @@ yum_package 'php55-pdo' do
   action :install
 end
 
-yum_package 'php-pear' do
+yum_package 'php55-pear' do
   action :install
 end
 
