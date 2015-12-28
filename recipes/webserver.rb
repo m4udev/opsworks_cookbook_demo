@@ -3,6 +3,10 @@ yum_package 'httpd' do
   action :remove
 end
 
+yum_package 'php-mysql' do 
+  action :remove
+end
+
 yum_package 'php' do 
   action :remove
 end
