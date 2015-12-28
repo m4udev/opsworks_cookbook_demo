@@ -59,5 +59,3 @@ end
 service 'httpd' do
   action :restart
 end
-
-include_recipe 'opsworks_cookbook_demo::php-defined-values'
