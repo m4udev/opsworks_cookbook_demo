@@ -7,5 +7,5 @@
 cookbook_file 'phpini settings' do 
 	action :create
 	source 'php.ini'
-	path '/etc/php-5.5.ini'
+	path '/etc/php.ini'
 end
