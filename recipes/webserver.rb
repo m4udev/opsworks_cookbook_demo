@@ -57,8 +57,4 @@ end
 yum_package 'php55-mbstring' do
   action :install
 end
-
-yum_package 'php-mysqli' do
-  action :install
-end
 ## Install ends
