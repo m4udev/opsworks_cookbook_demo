@@ -5,3 +5,7 @@
 yum_package 'php-mysql' do
 	action :install
 end
+
+yum_package 'php-mysqli' do
+	action :install
+end
