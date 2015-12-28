@@ -22,11 +22,11 @@ end
 yum_package 'php-mbstring' do
   action :remove
 end
-##Remove Ends
 
 yum_package 'httpd-tools' do 
   action :remove
 end
+##Remove Ends
 
 
 ## Install Start
@@ -50,11 +50,11 @@ yum_package 'php-pear' do
   action :install
 end
 
-
 yum_package 'php55-mbstring' do
   action :install
 end
 ## Install ends
+
 
 service 'httpd' do
   action :restart
