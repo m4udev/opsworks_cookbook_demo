@@ -7,10 +7,9 @@ yum_package 'httpd-tools' do
 end
 
 # Install httpd
-#yum_package 'httpd' do 
-#  action :upgrade
-#  version '2.4'
-#end
+yum_package 'httpd24' do 
+  action :install
+end
 
 ##service 'httpd' do
 #  action :start
