@@ -54,9 +54,6 @@ end
 #write the homepage
 file '/var/www/html/index.php' do 
   content '<?php echo phpinfo(); ?>'
-  mode '0755'
-  owner 'www'
-  group 'www'
 end
 
 
