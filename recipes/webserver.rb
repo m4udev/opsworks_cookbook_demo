@@ -15,12 +15,6 @@ service 'httpd' do
   action :start
 end
 
-# Install apache , config and etc END
-yum_package 'php' do
-  action :upgrade
-  version '5.5.12'
-end
-
 yum_package 'php' do 
   action :remove
 end
