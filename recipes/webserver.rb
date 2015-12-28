@@ -23,19 +23,27 @@ yum_package 'php-common' do
   action :remove
 end
 
+yum_package 'php-cli' do
+  action :remove
+end
+
+yum_package 'php-xml' do 
+  action :remove
+end
+
 yum_package 'php55' do 
   action :install
 end
 
-yum_package 'php-pdo' do
+yum_package 'php55-pdo' do
   action :install
 end
 
-yum_package 'php-pear' do
+yum_package 'php55-pear' do
   action :install
 end
 
-yum_package 'php-mbstring' do
+yum_package 'php55-mbstring' do
   action :install
 end
 
