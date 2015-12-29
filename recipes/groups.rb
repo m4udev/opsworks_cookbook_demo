@@ -10,14 +10,14 @@ execute 'chown-root-www' do
   action :run
 end
 
-execute 'set-future-folders'
+execute 'set-future-folders' do
 	command 'find /var/www -type d -exec sudo chmod 0775 {} +'
 	user 'root'
 	action :run
 end
 
 execute 'set-future-files'
-	command 'find /var/www -type f -exec sudo chmod 0775 {} +'
+	command 'find /var/www -type f -exec sudo chmod 0775 {} +' do
 	user 'root'
 	action :run
 end
