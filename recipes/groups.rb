@@ -16,8 +16,8 @@ execute 'set-future-folders' do
 	action :run
 end
 
-execute 'set-future-files'
-	command 'find /var/www -type f -exec sudo chmod 0775 {} +' do
+execute 'set-future-files' do
+	command 'find /var/www -type f -exec sudo chmod 0775 {} +' 
 	user 'root'
 	action :run
 end
