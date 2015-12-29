@@ -74,3 +74,8 @@ end
 yum_package 'php55-pecl-memcached' do
   action :install
 end
+
+#equivalent to chkconfig httpd on --autostart httpd
+service 'httpd' do 
+  action :enable
+end
