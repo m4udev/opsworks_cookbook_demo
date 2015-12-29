@@ -6,6 +6,7 @@ end
 
 
 directory '/var/www' do
+	action :create
 	owner 'root'
 	group 'www'
 	mode '0775'
