@@ -50,11 +50,27 @@ yum_package 'php55-pdo' do
   action :install
 end
 
-#yum_package 'php-pear' do
-#  action :install
-#end
+yum_package 'php-pear' do
+  action :install
+end
 
 yum_package 'php55-mbstring' do
   action :install
 end
 ## Install ends
+
+##install php extensions
+#GD
+yum_package 'php55-gd' do
+  action :install
+end
+
+#mcrypt
+yum_package 'php55-mcrypt' do
+  action :install
+end
+
+#memcache
+yum_package 'php55-pecl-memcached' do
+  action :install
+end

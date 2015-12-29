@@ -4,19 +4,3 @@ cookbook_file 'phpini settings' do
 	source 'php.ini'
 	path '/etc/php-5.5.ini'
 end
-
-##install php extensions
-#GD
-yum_package 'php55-gd' do
-	action :install
-end
-
-#mcrypt
-yum_package 'php55-mcrypt' do
-	action :install
-end
-
-#memcache
-yum_package 'php55-pecl-memcached' do
-	action :install
-end
