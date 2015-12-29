@@ -5,7 +5,7 @@ group 'www' do
 end
 
 
-directory '/var/www'
+directory '/var/www' do
 	owner 'root'
 	group 'www'
 	mode '0775'
