@@ -15,6 +15,6 @@ end
 
 execute "chown-root-www" do
   command "chown -R root:www /var/www"
-  user "ec2-user"
+  user "root"
   action :run
 end
