@@ -5,10 +5,16 @@ group 'www' do
 end
 
 
-directory '/var/www' do
-	action :create
-	owner 'root'
-	group 'www'
-	mode '0775'
-	recursive true
+#directory '/var/www' do
+	#action :create
+	#owner 'root'
+	#group 'www'
+	#mode '0775'
+	#recursive true
+#end
+
+execute "chown-root-www" do
+  command "chown -R root:www /var/www/"
+  user "ec2-user"
+  action :run
 end
